@@ -45,5 +45,12 @@ Before you begin, ensure you have met the following requirements:
    ```bash
    cd web-automation-cucumber
 
+3. **Install Dependencies**
+
+Make sure you have Maven installed. Run the following command to install the necessary dependencies:
+
+   ```bash
+   mvn install
+
 
    
