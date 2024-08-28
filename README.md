@@ -39,3 +39,11 @@ Before you begin, ensure you have met the following requirements:
 
    ```bash
    git clone https://github.com/narottamgla/web-automation-cucumber.git
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd web-automation-cucumber
+
+
+   
