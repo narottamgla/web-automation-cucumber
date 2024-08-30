@@ -19,7 +19,7 @@ public class LoginPageStep {
     }
     @Then("User should login successfully")
     public void user_should_login_successfully() {
-        loginPageAction.verifyIsLoginSuccssfull();
+        loginPageAction.verifyIsLoginSuccssful();
     }
 
 }

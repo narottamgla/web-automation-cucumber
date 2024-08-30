@@ -3,6 +3,7 @@ package com.web.hooks;
 import com.web.driver.DriverManager;
 import com.web.executiondata.AppData;
 import com.web.executiondata.GlobalData;
+import io.cucumber.java.AfterAll;
 import io.cucumber.java.BeforeAll;
 import lombok.extern.log4j.Log4j2;
 
@@ -23,4 +24,12 @@ public class Hook {
         DriverManager.setDriver(GlobalData.IS_REMOTE, GlobalData.EXECUTION_BROWSER);
         log.info("Driver setup done");
     }
+
+    @AfterAll(order = 2)
+    public static void tearDown(){
+        DriverManager.quitDriver();
+        log.info("Quit Driver done");
+    }
+
+
 }

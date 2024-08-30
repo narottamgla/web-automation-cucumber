@@ -1,7 +1,9 @@
 package com.web.locator;
 
+import com.web.driver.DriverManager;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.FindBy;
+import org.openqa.selenium.support.PageFactory;
 
 public class LoginPageLocator {
 
@@ -19,6 +21,8 @@ public class LoginPageLocator {
 
     @FindBy(css = "#inventory_filter_container .product_label")
     public WebElement productHomePageHeader;
+
+    
 
 
 }

@@ -28,7 +28,7 @@ public class LocalDriverFactory {
         options.addArguments("--ignore-certificate-errors");
         options.addArguments("--disable-popup-blocking");
         options.addArguments("--enable-precise-memory-info");
-        options.addArguments("--incognito");
+       // options.addArguments("--incognito");
         return new ChromeDriver(options);
     }
 }

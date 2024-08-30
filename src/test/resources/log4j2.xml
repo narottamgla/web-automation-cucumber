@@ -1,40 +1,18 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<Configuration status="WARN">
-
-    <!-- Appenders define where logs are outputted -->
+<!-- Extra logging related to initialization of Log4j.
+ Set to debug or trace if log4j initialization is failing. -->
+<Configuration status="warn">
     <Appenders>
-
-        <!-- Console appender for logging to the console -->
-        <Console name="ConsoleAppender" target="SYSTEM_OUT">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"/>
+        <!-- Console appender configuration -->
+        <Console name="console" target="SYSTEM_OUT">
+            <PatternLayout
+                    pattern="%d{yyyy-MM-dd HH:mm:ss} %-5p %c{1}:%L - %m%n" />
         </Console>
-
-        <!-- File appender for logging to a file -->
-        <File name="FileAppender" fileName="logs/application.log">
-            <PatternLayout pattern="%d{yyyy-MM-dd HH:mm:ss} %-5level %logger{36} - %msg%n"/>
-            <Policies>
-                <SizeBasedTriggeringPolicy size="10MB"/>
-            </Policies>
-            <DefaultRolloverStrategy max="10"/>
-        </File>
-
     </Appenders>
-
-    <!-- Loggers define different logging levels and their appenders -->
     <Loggers>
-
-        <!-- Root logger configuration -->
-        <Root level="info">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
+        <!-- Root logger referring to console appender -->
+        <Root level="info" additivity="false">
+            <AppenderRef ref="console" />
         </Root>
-
-        <!-- Custom logger for a specific package -->
-        <Logger name="com.example" level="debug" additivity="false">
-            <AppenderRef ref="ConsoleAppender"/>
-            <AppenderRef ref="FileAppender"/>
-        </Logger>
-
     </Loggers>
-
 </Configuration>

@@ -6,9 +6,9 @@ import org.junit.runner.RunWith;
 
 @RunWith(Cucumber.class)
 @CucumberOptions(
-        features = "classpath:",
+        features = "src/test/resources/features",
         glue = {"com.web.steps","com.web.hooks"},
-        dryRun = true,
+        dryRun = false,
         plugin = {"html:target/reports.html",
         "com.aventstack.extentreports.cucumber.adapter.ExtentCucumberAdapter:"}
 
