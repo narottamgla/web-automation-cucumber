@@ -1,4 +1,4 @@
 package com.web.utils;
 
-public class FileUtils {
+public class FileUtil {
 }
