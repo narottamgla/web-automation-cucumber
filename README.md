@@ -52,5 +52,40 @@ Make sure you have Maven installed. Run the following command to install the nec
    ```bash
    mvn install
 
+## Project Structure
 
-   
+web-automation-cucumber/
+│
+├── src/
+│   ├── main/
+│   │   ├── java/
+│   │   │   └── com/
+│   │   │       └── web/
+│   │   │           └── connectors/
+│   │   │           └── utils/
+│   │   │           └── drivers/
+│   │   │           └── enums/
+│   │   │           └── executiondata/    
+│   │   │
+│   └── test/
+│       ├── java/
+│       │   └── com/
+│       │       └── web/
+│       │           └── hooks/
+│       │           └── pagelocators/
+│       │           └── pageactions/
+│       │           └── steps/
+│       │           └── runner/
+│       └── resources/
+│           └── features/
+│           └── config/
+│                   └── dev/
+│                   └── qa/
+│                   └── preprod/
+│           └── log4j2.xml
+│           └── extent.properties
+│
+│
+├── .gitignore
+├── pom.xml
+└── README.md
