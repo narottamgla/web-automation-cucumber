@@ -51,9 +51,15 @@ Make sure you have Maven installed. Run the following command to install the nec
 
    ```bash
    mvn install
+   ```
 
+4. **Execute tests**
+
+  ```bash
+   mvn clean test -P stage
+  ```
 ## Project Structure
-
+```bash
 web-automation-cucumber/
 │
 ├── src/
