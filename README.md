@@ -58,6 +58,10 @@ Make sure you have Maven installed. Run the following command to install the nec
   ```bash
    mvn clean test -P stage
   ```
+
+## Configuration
+Maven profiles are used to manage different environments. Each profile specifies a different resource file path. Profiles are defined in pom.xml, and resource files are located in src/test/resources (e.g., config/test/config.properties, config/stage/config.properties, config/preprod/config.properties).
+
 ## Project Structure
 ```bash
 web-automation-cucumber/
