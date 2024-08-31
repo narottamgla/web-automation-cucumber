@@ -109,3 +109,9 @@ We welcome contributions to the project! To contribute:
 - **Create a Branch**: Create a new branch for your feature or bug fix.
 - **Make Changes**: Implement your changes and ensure they are well-tested.
 - **Submit a Pull Request**: Submit a pull request with a description of your changes.
+
+## Extent Report Sample
+
+[ExtendPDF.pdf](https://github.com/user-attachments/files/16824076/ExtendPDF.pdf)
+
+![extent](https://github.com/user-attachments/assets/32b84744-9d14-4859-94ef-66bf578f74ad)
