@@ -61,10 +61,10 @@ Welcome to the Web Automation project using Cucumber! This repository contains a
 
 - [Introduction](#introduction)
 - [Features](#features)
+- [Project Structure](#project-structure)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
 - [Configuration](#Configuration)
-- [Project Structure](#project-structure)
 - [Extent-Report Sample](#Extent-Report-Sample)
 - [Contributing](#contributing)
 
@@ -79,45 +79,7 @@ This project is designed to automate web application testing using Cucumber, a t
 - **Page Object Model**: Organized code structure to separate test logic from page-specific details.
 - **Extensible**: Easily add new steps and page objects to extend functionality.
 
-## Prerequisites
-
-Before you begin, ensure you have met the following requirements:
-
-- **Java 8 or higher**: Ensure Java is installed and properly set up on your machine.
-- **Maven**: For dependency management and project build.
-- **Selenium WebDriver(4)**: For browser automation (included via Maven dependencies).
-- **Cucumber**: For defining and executing BDD test cases (included via Maven dependencies).
-
-## Setup
-
-1. **Clone the Repository**
-
-   ```bash
-   git clone https://github.com/narottamgla/web-automation-cucumber.git
-
-2. **Navigate to the Project Directory**
-
-   ```bash
-   cd web-automation-cucumber
-
-3. **Install Dependencies**
-
-Make sure you have Maven installed. Run the following command to install the necessary dependencies:
-
-   ```bash
-   mvn install
-   ```
-
-4. **Execute tests**
-
-  ```bash
-   mvn clean test -P stage
-  ```
-
-## Configuration
-Maven profiles are used to manage different environments. Each profile specifies a different resource file path. Profiles are defined in pom.xml, and resource files are located in src/test/resources (e.g., config/test/config.properties, config/stage/config.properties, config/preprod/config.properties).
-
-## Project Structure
+ ## Project Structure
 ```bash
 web-automation-cucumber/
 │
@@ -156,6 +118,44 @@ web-automation-cucumber/
 └── README.md
 
   ```
+
+## Prerequisites
+
+Before you begin, ensure you have met the following requirements:
+
+- **Java 8 or higher**: Ensure Java is installed and properly set up on your machine.
+- **Maven**: For dependency management and project build.
+- **Selenium WebDriver(4)**: For browser automation (included via Maven dependencies).
+- **Cucumber**: For defining and executing BDD test cases (included via Maven dependencies).
+
+## Setup
+
+1. **Clone the Repository**
+
+   ```bash
+   git clone https://github.com/narottamgla/web-automation-cucumber.git
+
+2. **Navigate to the Project Directory**
+
+   ```bash
+   cd web-automation-cucumber
+
+3. **Install Dependencies**
+
+Make sure you have Maven installed. Run the following command to install the necessary dependencies:
+
+   ```bash
+   mvn install
+   ```
+
+4. **Execute tests**
+
+  ```bash
+   mvn clean test -P stage
+  ```
+
+## Configuration
+Maven profiles are used to manage different environments. Each profile specifies a different resource file path. Profiles are defined in pom.xml, and resource files are located in src/test/resources (e.g., config/test/config.properties, config/stage/config.properties, config/preprod/config.properties).
 
 ## Extent-Report Sample
 
