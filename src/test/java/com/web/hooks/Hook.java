@@ -4,8 +4,12 @@ import com.web.driver.DriverManager;
 import com.web.executiondata.AppData;
 import com.web.executiondata.GlobalData;
 import io.cucumber.java.AfterAll;
+import io.cucumber.java.AfterStep;
 import io.cucumber.java.BeforeAll;
+import io.cucumber.java.Scenario;
 import lombok.extern.log4j.Log4j2;
+import org.openqa.selenium.OutputType;
+import org.openqa.selenium.TakesScreenshot;
 
 @Log4j2
 public class Hook {
@@ -29,6 +33,13 @@ public class Hook {
     public static void tearDown(){
         DriverManager.quitDriver();
         log.info("Quit Driver done");
+    }
+
+    @AfterStep
+    public void addScreenshot(Scenario scenario){
+        final byte[] screenshot = ((TakesScreenshot) DriverManager.getDriver()).getScreenshotAs(OutputType.BYTES);
+        scenario.attach(screenshot,"image/png","Screenshot:");
+
     }
 
 
