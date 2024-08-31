@@ -8,7 +8,7 @@ Welcome to the Web Automation project using Cucumber! This repository contains a
 - [Features](#features)
 - [Prerequisites](#prerequisites)
 - [Setup](#setup)
-- [Usage](#usage)
+- [Configuration](#Configuration)
 - [Project Structure](#project-structure)
 - [Contributing](#contributing)
 - [License](#license)
