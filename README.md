@@ -30,7 +30,7 @@ Before you begin, ensure you have met the following requirements:
 
 - **Java 8 or higher**: Ensure Java is installed and properly set up on your machine.
 - **Maven**: For dependency management and project build.
-- **Selenium WebDriver**: For browser automation (included via Maven dependencies).
+- **Selenium WebDriver(4)**: For browser automation (included via Maven dependencies).
 - **Cucumber**: For defining and executing BDD test cases (included via Maven dependencies).
 
 ## Setup
