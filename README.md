@@ -99,3 +99,13 @@ web-automation-cucumber/
 ├── .gitignore
 ├── pom.xml
 └── README.md
+
+  ```
+
+## Contributing
+We welcome contributions to the project! To contribute:
+
+- **Fork the Repository**: Create a fork of the repository on GitHub.
+- **Create a Branch**: Create a new branch for your feature or bug fix.
+- **Make Changes**: Implement your changes and ensure they are well-tested.
+- **Submit a Pull Request**: Submit a pull request with a description of your changes.
