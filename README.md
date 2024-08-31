@@ -102,7 +102,7 @@ web-automation-cucumber/
 │       │           └── pagelocators/
 │       │           └── pageactions/
 │       │           └── steps/
-│       │           └── runner/
+│       │           └── runners/
 │       └── resources/
 │           └── features/
 │           └── config/
