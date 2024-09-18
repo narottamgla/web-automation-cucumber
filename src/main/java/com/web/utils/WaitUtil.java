@@ -1,6 +1,6 @@
 package com.web.utils;
 
-import com.web.driver.DriverManager;
+import com.web.drivers.DriverManager;
 import org.openqa.selenium.NoSuchElementException;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.support.ui.ExpectedCondition;

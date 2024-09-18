@@ -74,6 +74,13 @@
 
 
     <build>
+
+        <resources>
+            <!-- Default resource directory -->
+            <resource>
+                <directory>src/test/resources</directory>
+            </resource>
+        </resources>
         <plugins>
             <plugin>
                 <groupId>org.apache.maven.plugins</groupId>
@@ -87,9 +94,62 @@
                         <!-- Include your Cucumber tests, as an example -->
                         <include>**/*BaseTest.java</include>
                     </includes>
+                    <systemPropertyVariables>
+                        <env>${env}</env>
+                    </systemPropertyVariables>
                 </configuration>
+
+
             </plugin>
         </plugins>
     </build>
+
+
+    <profiles>
+        <profile>
+            <id>qa</id>
+            <properties>
+                <env>qa</env>
+            </properties>
+            <activation>
+                <activeByDefault>true</activeByDefault>
+            </activation>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/test/resources/config/qa/</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+
+        <profile>
+            <id>stage</id>
+            <properties>
+                <env>stage</env>
+            </properties>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/test/resources/config/stage/</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+
+        <profile>
+            <id>preprod</id>
+            <properties>
+                <env>preprod</env>
+            </properties>
+            <build>
+                <resources>
+                    <resource>
+                        <directory>src/test/resources/preprod/config/preprod</directory>
+                    </resource>
+                </resources>
+            </build>
+        </profile>
+    </profiles>
 
 </project>

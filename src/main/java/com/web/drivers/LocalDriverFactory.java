@@ -1,4 +1,4 @@
-package com.web.driver;
+package com.web.drivers;
 
 import com.web.enums.Browser;
 import org.openqa.selenium.WebDriver;

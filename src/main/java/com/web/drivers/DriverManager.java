@@ -1,4 +1,4 @@
-package com.web.driver;
+package com.web.drivers;
 
 import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.WebDriver;

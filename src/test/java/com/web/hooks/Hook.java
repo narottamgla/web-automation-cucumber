@@ -1,6 +1,6 @@
 package com.web.hooks;
 
-import com.web.driver.DriverManager;
+import com.web.drivers.DriverManager;
 import com.web.executiondata.AppData;
 import com.web.executiondata.GlobalData;
 import io.cucumber.java.AfterAll;
@@ -11,14 +11,33 @@ import lombok.extern.log4j.Log4j2;
 import org.openqa.selenium.OutputType;
 import org.openqa.selenium.TakesScreenshot;
 
+import java.io.InputStream;
+import java.util.Properties;
+
 @Log4j2
 public class Hook {
 
     @BeforeAll(order = 1)
     public static void setup(){
-        //load properties
+        String activeProfile = System.getProperty("env","qa");
+        log.info("Active profile: " + activeProfile);
+        Properties properties = new Properties();
         log.info("Loading properties from property file");
-        AppData.APP_URL.setUrl("https://www.saucedemo.com/v1/");
+
+        log.info("Resource URI:"+ Hook.class.getClassLoader().getResource("config.properties"));
+
+        try (InputStream resourceStream = Hook.class.getClassLoader().getResourceAsStream("config.properties")) {
+            if (resourceStream == null) {
+                throw new RuntimeException("Resource not found: " + "config.properties");
+            }
+            properties.load(resourceStream);
+            log.info("Properties loaded: " + properties);
+        } catch (Exception e) {
+            e.printStackTrace();
+        }
+
+        //load properties
+        AppData.APP_URL.setUrl(properties.getProperty("app_url"));
         log.info("Setting AppData done");
     }
 
